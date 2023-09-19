@@ -25,7 +25,7 @@ def multithreading_client(client):
             data = "HTTP/1.1 200 OK\n\n"
             with open('logoff.html', 'r') as fin:
                 content = fin.read()
-                content =content.replace('<h1>Olá BOSSAL!</h1>', f'<h1>Olá BOSSAL! IP DNS: {socket.gethostbyname(host)}</h1>')
+                content = content.replace('<h1>Bem Vindo!</h1>', f'<h1>Bem Vindo! IP DNS: {socket.gethostbyname(host)}</h1>')
             response = data + content
             client.send(response.encode())
         else:
